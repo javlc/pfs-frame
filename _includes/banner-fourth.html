@@ -1,0 +1,51 @@
+<section id="pfs-contact">
+    
+    <div class="container">
+        <div class="contact_text">
+            <div class="contact_title">
+                <h2>Write us online</h2>
+            </div>
+            <div class="content_details">
+                <p>Need information, or not sure where to start? Ask us anything! We'll be happy to respond to your message and get you started on the right foot.</p>
+            </div>
+        </div>
+        <div id="contact_form_wrapper" class="form_content">
+            <form action="{{site.data.settings.baseurl}}/quote" method="post" id="contact_form" name="contact_form" class="form" style="padding-bottom: 10px;" novalidate="novalidate">
+                <div class="input_box_wrap">
+                    <div class="input_box align_left">
+                        <label for="contact_fname" class="label_hidden">First name</label>
+                        <input type="text" name="contact_fname" id="contact_fname" class="text_field" placeholder="First name" required="">
+                    </div>
+                    <div class="input_box align_right">
+                        <label for="contact_lname" class="label_hidden">Last name</label>
+                        <input type="text" name="contact_lname" id="contact_lname" class="text_field" placeholder="Last name">
+                    </div>
+                </div>
+                <div class="input_box_wrap group">
+                    <div class="input_box align_left">
+                        <div class="group" style="width: 65%">
+                            <label for="contact_tel" class="label_hidden">Telephone</label>
+                            <input type="text" name="contact_tel" id="contact_tel" class="text_field" placeholder="Telephone" required="">
+                        </div>
+                        <div class="group" style="width: 32%">
+                            
+                            <label for="contact_tel_ext" class="label_hidden">Ext.</label>
+                            <input type="text" name="contact_tel_ext" id="contact_tel_ext" class="text_field" placeholder="Ext.">
+                        </div>
+                    </div>
+                    <div class="input_box align_right">
+                        <label for="contact_email" class="label_hidden">Email address</label>
+                        <input type="email" name="contact_email" id="contact_email" class="text_field" placeholder="Email address" required="">
+                    </div>
+                </div>
+                <div class="input_box_wrap">
+                    <label for="contact_project" class="label_hidden">Project details</label>
+                    <textarea name="contact_project" id="contact_project" class="text_field" placeholder="Project details"></textarea>
+                </div>
+                <div class="input_box_wrap input_actions">
+                    <input type="submit" name="contact_submit" id="contact_submit" class="align_left btn" value="Submit Request">
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

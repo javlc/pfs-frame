@@ -1,0 +1,127 @@
+#pfs-slider
+    .slider
+        display: block
+        position: relative
+        margin: auto
+        width: 100%
+        max-width: $on-widescreen
+        // height: 59vh
+        // height: 562px
+        // min-height: 50vh
+        overflow: hidden
+
+        label
+            opacity: 0
+            animation: descubrir 23s linear 1
+            position: absolute
+            bottom: 20px
+            width: 12px
+            height: 12px
+            background: rgba(200,200,200,.5)
+            border-radius: 7px
+            z-index: 100
+            border: 1px solid #555
+            &:nth-child(2)
+                opacity: 1
+                left: 30px
+            &:nth-child(4)
+                opacity: 1
+                left: 60px
+            &:nth-child(6)
+                opacity: 1
+                left: 90px
+    .boton
+        position: absolute
+        display: block
+        bottom: 20px
+        margin: 0
+        padding: 0
+        z-index: 999
+        cursor: pointer
+        opacity: 0
+        &:nth-child(1)
+            left: 30px
+            &:checked ~ .contenedor-img
+                left: 0
+        &:nth-child(3)
+            left: 60px
+            &:checked ~ .contenedor-img
+                left: -100%
+        &:nth-child(5)
+            left: 90px
+            &:checked ~ .contenedor-img
+                left: -200%
+
+        &:checked + label
+            background: rgba(0,0,0,.6)
+            border-color: #555
+
+    .contenedor-img img
+        display: block
+        float: left
+
+    .contenedor-img .text-overlay
+        color: #fff
+        position: absolute
+        width: 25%
+        //padding-top: 22vw
+        height: 40vw
+        display: flex
+        flex-direction: column
+        justify-content: flex-end
+        &:nth-child(1)
+            left: 0
+            color: #D1C4E9
+        &:nth-child(3)
+            left: 25%
+            color: #ffebee
+            z-index: 100
+        &:nth-child(5)
+            left: 50%
+            color: #CFD8DC
+
+    .contenedor-img .text-overlay > *
+        display: inline-block
+        text-shadow: 0px 0px 5px rgba(0,0,0, 1)        
+        text-align: center
+    .contenedor-img .text-overlay > h1
+        font-family: $bold-font-family
+        font-size: 32px
+    .contenedor-img .text-overlay > p
+        padding: 0 5vw
+
+    .tres-imagenes
+        width: 400%
+        img
+            width: 25%
+    
+    .contenedor-img
+        position: relative
+        left: 0
+        transition: left .3s ease-in
+        animation: iterar 20s ease-in 1
+
+
+@keyframes iterar
+    0%
+        left: 0
+    28%
+        left: 0
+    30%
+        left: -100%
+    63%
+        left: -100%
+    65%
+        left: -200%
+    98%
+        left: -200%
+    100%
+        left: 0
+
+@keyframes descubrir
+    0%
+        opacity: 0
+    90%
+        opacity: 0
+    100%
+        opacity: 1

@@ -1,0 +1,22 @@
+title: PFS Starter
+logo: logo-pfs.jpg
+
+baseurl: "" # the subpath of your site, e.g. /blog
+
+seo:
+  description: "Prime Factor Solutions is an outsourcing company providing software quality assurance and software development services."
+  rel-author: "PFS"
+  rel-publisher: "TBD"
+
+email: your-email@domain.com
+description: > # this means to ignore newlines until next key, i.e. "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+url: "http://yourdomain.com" # the base hostname & protocol for your site
+
+twitter_username: my_twitter_handle
+facebook_username: my_fb_user
+linkedin_username: my_linkeidn_user
+googleplus_username: my_gplus_user
+

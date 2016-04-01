@@ -1,0 +1,110 @@
+section#pfs-contact
+    box-sizing: border-box
+    background: $contact-area-bg
+    color: #fff
+    max-width: $on-widescreen
+    width: 100%
+    margin: 0 auto
+
+    *, *:before, *:after
+        box-sizing: inherit
+
+    .label_hidden
+        display: none
+
+    .form input, #contact_project
+        border: #fff solid 2px
+        color: #fff
+        font-family: $base-font-family
+
+        &[type="text"], &[type="email"]
+            @include placeholder()
+                color: #fff
+                font-family: $base-font-family
+            &:focus
+                outline: none
+                background: rgba(#fff, 0.3)
+                
+    
+    textarea#contact_project        
+        @include placeholder()
+            color: #fff
+            font-family: $base-font-family
+        &:focus
+            outline: none
+            background: rgba(#fff, 0.3)
+
+    .container
+        width: 100%
+        padding: 4vw 2vw
+
+        .contact_text
+            display: inline-block
+            width: 33%
+            vertical-align: top
+            h2
+                font-family: $bold-font-family
+                text-transform: uppercase
+
+            +media-query($on-palm)
+                display: block
+                width: 100%
+                padding: 0.3em
+
+        .form_content
+            display: inline-block
+            width: 66%
+
+            +media-query($on-palm)
+                display: block
+                width: 100%
+
+        .input_box_wrap, .input_actions
+            width: 100%
+            padding: 0.3em 0.4em
+
+            +media-query(450px)
+                padding: 0 0.4em
+
+        .input_actions
+            padding-top: 0
+
+        .input_box_wrap:nth-child(3)
+            padding-bottom: 0
+            margin-bottom: 0
+
+    .input_box.align_left, .input_box.align_right
+        display: inline-block
+        width: 49%
+
+        +media-query(450px)
+            display: block
+            width: 100%
+            margin: 0.5em 0
+
+            &:first-child
+                margin: 0 0 0.5em 0
+
+    .group
+        display: inline-block
+
+    .input_box input, textarea#contact_project
+        box-sizing: border-box
+        height: 3em
+        padding: 0.3em 0.5em
+        width: 98%
+        background: transparent
+
+    textarea#contact_project
+        min-height: 7em
+
+    .input_actions input
+        border: none
+        color: $contact-area-bg
+        font-size: $base-font-size * 1.05
+        text-transform: uppercase
+        font-weight: bold
+        background: #fff
+        padding: 1.3em
+        line-height: 0
+        cursor: pointer

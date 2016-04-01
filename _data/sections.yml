@@ -1,0 +1,15 @@
+- name: about
+  title: "About"
+  url: \#pfs-slider
+
+- name: services
+  title: "Services"
+  url: \#pfs-services
+
+- name: contact
+  title: "Contact Us"
+  url: \#pfs-contact
+
+#- name: social
+#  title: "Social Icons"
+#  url: /social/
