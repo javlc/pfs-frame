@@ -30,6 +30,14 @@
             &:nth-child(6)
                 opacity: 1
                 left: 90px
+        
+        +media-query($on-palm)
+            .contenedor-img .text-overlay > h1
+                margin: 0
+                font-size: 26px
+            .contenedor-img .text-overlay > p
+                font-size: 12px
+
     .boton
         position: absolute
         display: block
@@ -65,7 +73,7 @@
         position: absolute
         width: 25%
         //padding-top: 22vw
-        height: 40vw
+        height: 43vw
         display: flex
         flex-direction: column
         justify-content: flex-end
@@ -89,6 +97,7 @@
         font-size: 32px
     .contenedor-img .text-overlay > p
         padding: 0 5vw
+        margin-bottom: 30px
 
     .tres-imagenes
         width: 400%
@@ -100,6 +109,27 @@
         left: 0
         transition: left .3s ease-in
         animation: iterar 20s ease-in 1
+
+    +media-query($on-palm)
+        .contenedor-img            
+            box-sizing: border-box
+            .text-overlay
+                height: 30vw
+                background: transparent
+                justify-content: center
+                text-shadow: initial
+                p
+                    padding: 0 1vw
+                    margin-bottom: 0
+            img
+                padding-top: 30vw
+                &:nth-child(2)
+                    background: #844BB6
+                &:nth-child(4)
+                    background: #8A1E14
+                &:nth-child(6)
+                    background: #000D1B
+
 
 
 @keyframes iterar
@@ -115,6 +145,22 @@
         left: -200%
     98%
         left: -200%
+    100%
+        left: 0
+
+@keyframes iterarsml
+    0%
+        left: 0
+    28%
+        left: 0
+    30%
+        left: calc(-100% / 0.61)
+    63%
+        left: calc(-100% / 0.61)
+    65%
+        left: calc(-200% / 0.61)
+    98%
+        left: calc(-200% / 0.61)
     100%
         left: 0
 
